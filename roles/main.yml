@@ -1,0 +1,10 @@
+---
+- name: ubuntu
+  hosts: ubuntu-server
+  roles:
+    - role: ubuntu-update
+      tags: ubuntu-update
+    - role: ubuntu-ufw
+      tags: ubuntu-ufw
+    - role: ubuntu-fail2ban
+      tags: ubuntu-fail2ban
