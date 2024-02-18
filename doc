@@ -1,0 +1,18 @@
+ansible test-server -i inventory/test.ini -m ping
+ansible test-server -i inventory/test.ini -m ping -vvvv
+ansible test-server -m ping
+ansible test-server -m command -a uptime
+ansible test-server -a uptime
+ansible test-server -a "tail /var/log/dmesg"
+ansible test-server -a "tail /var/log/syslog"
+ansible test-server -b -a "tail /var/log/dmesg"
+ansible-inventory --graph
+
+
+- name: install nginx - Комментарий , пишется с большой буквы
+- become выполнять от пользователя указанного в параметре become_user
+
+apt:  модуль apt
+    name: nginx установить пакет с именем nginx
+    state: latest последняя версия пакета
+    update_cache: yes обновить кеш пакетов
