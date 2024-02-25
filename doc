@@ -16,3 +16,20 @@ apt:  модуль apt
     name: nginx установить пакет с именем nginx
     state: latest последняя версия пакета
     update_cache: yes обновить кеш пакетов
+
+Главное все делать командами, а не напрямую shell так как таким образом не хранится состояние
+
+Какие есть модули
+
+copy
+package
+file
+service
+template
+
+статусы
+ок - действий не требуется
+changed - изменено
+
+Пример репозитория
+https://github.com/etoosamoe/etosamoe-ansible
